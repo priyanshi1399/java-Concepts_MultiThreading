@@ -1,6 +1,7 @@
 package Streams;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -122,11 +123,19 @@ public class StreamQuestion {
                         .split("\\s+")))
                 .collect(Collectors.groupingBy(word->word,Collectors.counting()));
 
-      //  wordFreq.forEach((word, count) -> System.out.println(word + ": " + count));
+       wordFreq.forEach((word, count) -> System.out.println(word + ": " + count));
 
 
 
 
+        //count the frequency of each word in String
+
+        String text="I love DSA and I am doing DSA daily ";
+
+        Map<String,Long> wordfreq=Arrays.stream(text.toLowerCase().split("\\s+"))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+        wordfreq.forEach((word,count)-> System.out.println(word + ": " + count));
 
     }
 }
