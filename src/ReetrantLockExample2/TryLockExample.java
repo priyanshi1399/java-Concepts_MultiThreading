@@ -5,6 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class TryLockExample {
 
+
     ReentrantLock lock=new ReentrantLock();
 
     public void accessResourceExample(String threadName){

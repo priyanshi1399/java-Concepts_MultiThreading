@@ -19,7 +19,6 @@ public class SharedResources {
             }
             System.out.println(Thread.currentThread().getName()+ "Thread hold count "+number);
         }
-
         catch(Exception e){
 
         }

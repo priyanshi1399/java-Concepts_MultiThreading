@@ -3,7 +3,6 @@ package ReetrantLockExample2;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-
        /* SharedResources resources=new SharedResources();
 
         Thread t1=new Thread(()->{
