@@ -13,7 +13,7 @@ public class CancelWithFuture {
         Future<?> future= threadPool.submit(task);
 
         try{
-            future.get(10, TimeUnit.SECONDS);
+            future.get(10, TimeUnit.MICROSECONDS);
         }
         catch(TimeoutException | InterruptedException | ExecutionException e){
             future.cancel(true);
