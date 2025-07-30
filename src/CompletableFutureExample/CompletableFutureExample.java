@@ -16,7 +16,6 @@ public class CompletableFutureExample {
                     .thenApply((order) -> payment(order))
                     .thenApply((order) -> dispatchOrder(order))
                     .thenAccept((order) -> sendEmail(order));
-
             futures.add(future);
         }
         futures.forEach(CompletableFuture::join);
